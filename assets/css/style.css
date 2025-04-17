@@ -1,15 +1,10 @@
 /* Google fonts import */
-@import url("https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Mouse+Memoirs&display=swap");
 
 body {
     font-family: "Mouse Memoirs", sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    margin: 0;
-    padding: 0;
 }
 h1 {
-    font-size: 2.5em;
-    text-align: center;
-    margin-top: 20px;
+    font-family: "Handjet", sans-serif;
 }
