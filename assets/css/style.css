@@ -27,6 +27,10 @@ h3 {
     padding: 1rem;
 }
 
+#navbar .logo {
+    width: 28px;
+}
+
 /* grid visualization for testing */
 
 /* .container,
