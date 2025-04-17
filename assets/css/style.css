@@ -2,9 +2,21 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Mouse+Memoirs&display=swap");
 
-body {
-    font-family: "Mouse Memoirs", sans-serif;
+/* CSS Variables */
+:root {
+    --primary-font: "Mouse Memoirs", sans-serif;
+    --secondary-font: "Handjet", sans-serif;
+    --primary-color: #ffcc00;
+    --secondary-color: #ff9900;
 }
-h1 {
-    font-family: "Handjet", sans-serif;
+
+/* Global Styles */
+body {
+    font-family: var(--primary-font);
+}
+h1,
+h2,
+h3 {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
 }
