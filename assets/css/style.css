@@ -88,3 +88,20 @@ main .row {
     width: 80px;
     height: 80px;
 }
+
+.card.flipped {
+    transform: rotateY(180deg); /* flip the card */
+}
+
+.front,
+.back {
+    backface-visibility: hidden; /* hide the back of the card when flipped */
+    position: absolute;
+    padding: 20px;
+    border-radius: 5px;
+    border: 5px double black;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
