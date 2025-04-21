@@ -66,16 +66,20 @@ button {
     border-radius: 5px;
 }
 
-.tiles {
-    margin: 48px auto;
-    width: max-content;
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
+main .row {
+    width: 100%;
     gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 140px);
+    grid-template-rows: repeat(4, calc(140px / 2 * 3));
 }
-.tile {
-    height: 100px;
-    background: #111111;
-    border: 5px solid #444444;
-    cursor: pointer;
+
+.card {
+    width: 140px;
+    height: 210px; /* 140px / 2 * 3 */
+    border-radius: 10px;
+    background-color: white;
+
+    transform-style: preserve-3d; /* Nice 3d look to flip effect */
+    transition: all 0.5s ease-in-out; /* smooth transition */
 }
