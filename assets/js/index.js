@@ -85,5 +85,45 @@ function flipCard() {
     document.querySelector(".score").textContent = score;
     lockBoard = true;
 
-    // checkForMatch();
+    checkForMatch();
+}
+
+/**
+ * Checks if the two flipped cards match by comparing their data attributes.
+ * If they match, it disables the cards; otherwise, it unflips them after a delay.
+ *
+ * @returns {void}
+ */
+function checkForMatch() {
+    const isMatch = firstCard.dataset.name === secondCard.dataset.name;
+
+    isMatch ? disableCards() : unflipCards();
+}
+
+/**
+ * Disables the matched cards by removing the event listener for the flip action.
+ * This prevents further interaction with the matched cards.
+ *
+ * @returns {void}
+ */
+function disableCards() {
+    firstCard.removeEventListener("click", flipCard);
+    secondCard.removeEventListener("click", flipCard);
+
+    resetBoard();
+}
+
+/**
+ * Unflips the cards if they do not match by removing the flipped class from both cards.
+ * This function also resets the board after a delay to allow the player to see the cards before they are flipped back.
+ *
+ * @returns {void}
+ */
+function unflipCards() {
+    setTimeout(() => {
+        firstCard.classList.remove("flipped");
+        secondCard.classList.remove("flipped");
+
+        resetBoard();
+    }, 1500);
 }
