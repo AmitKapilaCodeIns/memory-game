@@ -57,6 +57,33 @@ function generateCards() {
         <div class="back"></div>`;
 
         rowContainer.appendChild(cardElement);
-        // cardElement.addEventListener("click", flipCard);
+        cardElement.addEventListener("click", flipCard);
     }
+}
+
+/**
+ * Handles the flip action for a card when it is clicked.
+ * This function manages the game logic for flipping cards, checking for matches,
+ * and updating the score. It prevents flipping more than two cards at a time
+ * and ensures the same card cannot be flipped twice in a row.
+ *
+ * @returns {void}
+ */
+function flipCard() {
+    if (lockBoard) return;
+    if (this === firstCard) return;
+
+    this.classList.add("flipped");
+
+    if (!firstCard) {
+        firstCard = this;
+        return;
+    }
+
+    secondCard = this;
+    score++;
+    document.querySelector(".score").textContent = score;
+    lockBoard = true;
+
+    // checkForMatch();
 }
