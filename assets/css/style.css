@@ -105,3 +105,10 @@ main .row {
     height: 100%;
     width: 100%;
 }
+
+.card .front {
+    display: flex;
+    justify-content: center; /* center the icons horizontally and vertically */
+    align-items: center;
+    transform: rotateY(180deg);
+}
