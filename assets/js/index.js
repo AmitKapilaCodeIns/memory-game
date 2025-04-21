@@ -19,7 +19,7 @@ fetch("./data/cards.json") //Fetching the cards data from a local JSON file
 /**
  * Shuffles an array of cards using the Fisher-Yates algorithm.
  * This function modifies the array in place to randomize the order of its elements.
- *
+ * https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
  * @returns {void}
  */
 function shuffleCards() {
@@ -29,12 +29,13 @@ function shuffleCards() {
     // While there remain elements to shuffle...
     while (currentIndex !== 0) {
         // Pick a remaining element...
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
+        let randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
         // And swap it with the current element.
-        temporaryValue = cards[currentIndex];
-        cards[currentIndex] = cards[randomIndex];
-        cards[randomIndex] = temporaryValue;
+        [cards[currentIndex], cards[randomIndex]] = [
+            cards[randomIndex],
+            cards[currentIndex],
+        ];
     }
 }
 
