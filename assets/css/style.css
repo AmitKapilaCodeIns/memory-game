@@ -115,7 +115,7 @@ main .row {
 .card .back {
     background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%23ffffffff'/><path d='M20 20v20h20V20zm5 5h10v10H25zM0 0v20h20V0zm5 5h10v10H5z'  stroke-width='1' stroke='none' fill='%239c27b0ff'/><path d='M5 25h10v10H5zM25 5h10v10H25z'  stroke-width='1' stroke='none' fill='hsla(4.1,89.6%,58.4%,1)'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
     background-position: center center; /* center the background image */
-    background-size: 90%;
+    background-size: 130px 200px;
     background-repeat: no-repeat;
     backface-visibility: hidden;
 }
