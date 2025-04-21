@@ -127,3 +127,17 @@ function unflipCards() {
         resetBoard();
     }, 1500);
 }
+
+function resetBoard() {
+    [firstCard, secondCard] = [null, null];
+    lockBoard = false;
+}
+
+function restart() {
+    resetBoard();
+    shuffleCards();
+    score = 0;
+    document.querySelector(".score").textContent = score;
+    rowContainer.innerHTML = "";
+    generateCards();
+}
