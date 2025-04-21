@@ -1,3 +1,5 @@
+const rowContainer = document.querySelector("main>.container>.row");
+
 let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
@@ -6,11 +8,12 @@ let score = 0;
 document.querySelector(".score").textContent = score;
 
 fetch("./data/cards.json") //Fetching the cards data from a local JSON file
-    .then((res) => res.json()) //Parsing the JSON data
+    .then((response) => response.json()) //Parsing the JSON data
     .then((data) => {
         //Using the data to create the cards
         cards = [...data, ...data]; // spread operator to duplicate the array
         shuffleCards();
+        generateCards();
     });
 
 /**
@@ -32,5 +35,28 @@ function shuffleCards() {
         temporaryValue = cards[currentIndex];
         cards[currentIndex] = cards[randomIndex];
         cards[randomIndex] = temporaryValue;
+    }
+}
+
+/**
+ * Generates card elements dynamically based on the `cards` array and appends them to the grid container.
+ * Each card element is created with a front and back side, and an event listener is added to handle the flip action.
+ *
+ * @returns {void}
+ */
+function generateCards() {
+    for (let card of cards) {
+        const cardElement = document.createElement("div");
+        cardElement.classList.add("card");
+        // cardElement.classList.add("col-12 col-md-6 col-xl-3");
+        cardElement.setAttribute("data-name", card.name);
+        cardElement.innerHTML = `
+        <div class="front">
+        <img class="front-image" src=${card.image} />
+        </div>
+        <div class="back"></div>`;
+
+        rowContainer.appendChild(cardElement);
+        // cardElement.addEventListener("click", flipCard);
     }
 }
