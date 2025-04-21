@@ -13,6 +13,7 @@ const colors = [
     "lime",
     "teal",
 ];
+
 const colorsPicklist = [...colors, ...colors];
 const tileCount = colorsPicklist.length;
 
