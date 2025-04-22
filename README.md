@@ -1,32 +1,32 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
--   [Memory game](#memory-game)
-    -   [Planning](#planning)
-    -   [Requirements](#requirements)
-    -   [User Stories](#user-stories)
-        -   [As a First-Time Visitor, I need easy navigation and a user-friendly design, including a responsive layout for my device.](#as-a-first-time-visitor-i-need-easy-navigation-and-a-user-friendly-design-including-a-responsive-layout-for-my-device)
-        -   [As a player, I want to see clear instructions on how to play, so I am clear on what I need to do in order to win.](#as-a-player-i-want-to-see-clear-instructions-on-how-to-play-so-i-am-clear-on-what-i-need-to-do-in-order-to-win)
-        -   [As a player, I want to see revealed cards that allows me to keep track.](#as-a-player-i-want-to-see-revealed-cards-that-allows-me-to-keep-track)
-        -   [As a player, I want the hidden cards to change each time the game starts.](#as-a-player-i-want-the-hidden-cards-to-change-each-time-the-game-starts)
-        -   [As a player, I want to be see my score so that I have a target that I aim to beat in subsequent goes.](#as-a-player-i-want-to-be-see-my-score-so-that-i-have-a-target-that-i-aim-to-beat-in-subsequent-goes)
-    -   [Features](#features)
-        -   [All pages on the website have](#all-pages-on-the-website-have)
-    -   [Code](#code)
-        -   [Files](#files)
-        -   [Code format](#code-format)
-        -   [Code understandability](#code-understandability)
-    -   [Testing](#testing)
-        -   [Manual Testing](#manual-testing)
-        -   [Accessibility](#accessibility)
-        -   [HTML](#html)
-        -   [CSS](#css)
-    -   [Bugs](#bugs)
-        -   [Unfixed Bugs](#unfixed-bugs)
-    -   [Deployment](#deployment)
-        -   [Version Control](#version-control)
-    -   [Wireframes](#wireframes)
-    -   [Credits](#credits)
+- [Memory game](#memory-game)
+  - [Planning](#planning)
+  - [Requirements](#requirements)
+  - [User Stories](#user-stories)
+      - [As a First-Time Visitor, I need easy navigation and a user-friendly design, including a responsive layout for my device.](#as-a-first-time-visitor-i-need-easy-navigation-and-a-user-friendly-design-including-a-responsive-layout-for-my-device)
+      - [As a player, I want to see clear instructions on how to play, so I am clear on what I need to do in order to win.](#as-a-player-i-want-to-see-clear-instructions-on-how-to-play-so-i-am-clear-on-what-i-need-to-do-in-order-to-win)
+      - [As a player, I want to see revealed cards that allows me to keep track.](#as-a-player-i-want-to-see-revealed-cards-that-allows-me-to-keep-track)
+      - [As a player, I want the hidden cards to change each time the game starts.](#as-a-player-i-want-the-hidden-cards-to-change-each-time-the-game-starts)
+      - [As a player, I want to be see my score so that I have a target that I aim to beat in subsequent goes.](#as-a-player-i-want-to-be-see-my-score-so-that-i-have-a-target-that-i-aim-to-beat-in-subsequent-goes)
+  - [Features](#features)
+      - [All pages on the website have](#all-pages-on-the-website-have)
+  - [Code](#code)
+      - [Files](#files)
+      - [Code format](#code-format)
+      - [Code understandability](#code-understandability)
+  - [Testing](#testing)
+      - [Manual Testing](#manual-testing)
+      - [Accessibility](#accessibility)
+      - [HTML](#html)
+      - [CSS](#css)
+  - [Bugs](#bugs)
+    - [Unfixed Bugs](#unfixed-bugs)
+  - [Deployment](#deployment)
+    - [Version Control](#version-control)
+  - [Wireframes](#wireframes)
+  - [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -96,11 +96,51 @@ The game has different levels. In easy mode there are 4 cards. In normal mode th
 
 #### Code format
 
--   VS code automatically indents HTML and CSS to ease readability
+-   VS code automatically indents HTML, Javascript and CSS to ease readability
+
+```
+
+const rowContainer = document.querySelector("main>.container>.row");
+
+let cards = [];
+let firstCard, secondCard;
+let lockBoard = false;
+let score = 0;
+
+document.querySelector(".score").textContent = score;
+restart();
+
+function easy() {
+    rowContainer.innerHTML = "";
+    fetch("./data/cards.json") //Fetching the cards data from a local JSON file
+        .then((response) => response.json()) //Parsing the JSON data
+        .then((data) => {
+            //Using the data to create the cards
+            cards = [...data, ...data]; // spread operator to duplicate the array
+            shuffleCards();
+            generateCards();
+        });
+}
+
+```
 
 #### Code understandability
 
 -   Copious amounts of comments to explain what the code is doing and why.
+
+```
+function hard() {
+    rowContainer.innerHTML = "";
+    fetch("./data/cards-hard.json") //Fetching the cards data from a local JSON file
+        .then((response) => response.json()) //Parsing the JSON data
+        .then((data) => {
+            //Using the data to create the cards
+            cards = [...data, ...data]; // spread operator to duplicate the array
+            shuffleCards();
+            generateCards();
+        });
+}
+```
 
 ---
 
