@@ -157,6 +157,10 @@ function hard() {
 
 #### Manual Testing
 
+-   In addition to automated testing, this project has also been manually tested to ensure everything works as expected. Here are the steps for manual testing:
+
+Open the game in a web browser. Select a difficulty level, between Easy and Hard. Flip over two cards. If they match, they should stay face up. If they don't match, they should be flipped back over after a short delay. Continue flipping over cards until all pairs have been matched. The game should then display a score indicating how many turns it took to win. Test the game in different browsers and on different devices to ensure it works correctly in all environments.
+
 | Feature          | Action                    | Expected result                           | Tested | Passed | Comments |
 | ---------------- | ------------------------- | ----------------------------------------- | ------ | ------ | -------- |
 | Home             | Click on the "Home" link  | The user is redirected to the main page   | Yes    | Yes    | \-       |
