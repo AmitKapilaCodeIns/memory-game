@@ -112,6 +112,8 @@ function unflipCards() {
 }
 
 function resetBoard() {
-    [firstCard, secondCard] = [null, null];
-    lockBoard = false;
+    if (firstCard !== null || secondCard !== null) {
+        [firstCard, secondCard] = [null, null];
+        lockBoard = false;
+    }
 }
