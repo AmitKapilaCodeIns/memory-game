@@ -113,6 +113,11 @@ function unflipCards() {
     }, 1500);
 }
 
+/**
+ * Resets the board by clearing the first and second card variables and unlocking the board.
+ *
+ * @returns {void}
+ */
 function resetBoard() {
     if (firstCard !== null || secondCard !== null) {
         [firstCard, secondCard] = [null, null];

@@ -3,7 +3,7 @@
 // This is the main JavaScript file for the memory game.
 const rowContainer = document.querySelector("main>.container>.row");
 
-const cards = [];
+let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
 let score = 0;
@@ -42,6 +42,9 @@ async function hard() {
         });
 }
 
+/**
+ * Restarts the game by resetting the board, score, and difficulty level.
+ */
 function restart() {
     resetBoard();
 
