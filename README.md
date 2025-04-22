@@ -1,6 +1,5 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Memory game](#memory-game)
   - [Planning](#planning)
@@ -44,7 +43,6 @@
 -   The site should be responsive, adapting to all screen sizes.
 
 -   Players should be allowed to challenge their memory skills with different levels as they build up confidence. They should be congratulated with a rewarding pop up notification.
-
 
 ---
 
@@ -162,7 +160,6 @@ The game has different levels. In easy mode there are 4 cards. In normal mode th
 
 All bugs identified were fixed
 
-
 ## Deployment
 
 ### Version Control
@@ -194,7 +191,7 @@ All bugs identified were fixed
 
 ## Wireframes
 
--   These wireframes were created using Balsamiq during the Scope Plane part of the design and planning process for this project. The site was developed with the Desktop layout method first. The wireframes were therefore drawn with that thought in mind and adapted alongside project changes, and created with [Balsamiq](https://balsamiq.cloud/) . First picture: Home page, Second picture: Coaching page, Third picture: Member page, Fourth picture: Thank you page.
+-   These wireframes were created using Balsamiq during the Scope Plane part of the design and planning process for this project. The site was developed with the Desktop layout method first. The wireframes were therefore drawn with that thought in mind and adapted alongside project changes, and created with [Balsamiq](https://balsamiq.cloud/) . First picture: Home page.
     ![Screenshot Home page Wiframe ](./wireframes/home-wiframe.png)
 
 ---
@@ -212,4 +209,3 @@ All bugs identified were fixed
 -   For a better performance of the website, the images were resized and the format changed to WEBP using the [Birme](https://www.birme.net/) website.
 
 [def]: .documentation/checkmylinks.png
-
