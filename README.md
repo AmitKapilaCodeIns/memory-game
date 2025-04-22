@@ -16,6 +16,7 @@
       - [Files](#files)
       - [Code format](#code-format)
       - [Code understandability](#code-understandability)
+      - [Code validation](#code-validation)
   - [Testing](#testing)
       - [Manual Testing](#manual-testing)
       - [Accessibility](#accessibility)
@@ -141,6 +142,13 @@ function hard() {
         });
 }
 ```
+
+#### Code validation
+
+-   JSHint passed as it only showed ES6 warnings.
+
+-   ![Validation](./documentation/validindexjs.png)
+-   ![Validation](./documentation/validfunctionsjs.png)
 
 ---
 
