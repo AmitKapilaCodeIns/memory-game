@@ -6,6 +6,7 @@ let lockBoard = false;
 let score = 0;
 
 document.querySelector(".score").textContent = score;
+restart();
 
 function easy() {
     rowContainer.innerHTML = "";
