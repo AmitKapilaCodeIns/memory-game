@@ -19,6 +19,7 @@
       - [Code validation](#code-validation)
   - [Testing](#testing)
       - [Manual Testing](#manual-testing)
+      - [Console](#console)
       - [Accessibility](#accessibility)
       - [HTML](#html)
       - [CSS](#css)
@@ -156,29 +157,19 @@ function hard() {
 
 #### Manual Testing
 
-| Feature                      | Action                       | Expected result                                | Tested | Passed | Comments                                                                                                                  |
-| ---------------------------- | ---------------------------- | ---------------------------------------------- | ------ | ------ | ------------------------------------------------------------------------------------------------------------------------- |
-| Navbar                       |                              |                                                |        |        |                                                                                                                           |
-| Home                         | Click on the "Home" link     | The user is redirected to the main page        | Yes    | Yes    | \-                                                                                                                        |
-| Services                     | Click on the "Services" link | The user is redirected to the Services section | Yes    | Yes    | \-                                                                                                                        |
-| Events                       | Click on the "Events" link   | The user is redirected to the Events section   | Yes    | Yes    | \-                                                                                                                        |
-| Coaching                     | Click on the "Coaching" link | The user is redirected to the Coaching page    | Yes    | Yes    | \-                                                                                                                        |
-| Contact                      | Click on the "Contact" link  | The user redirected to the Contact section     | Yes    | Yes    | \-                                                                                                                        |
-| Become a member              | Click "Become a member" link | The user redirected to the Membership page     | Yes    | Yes    | \-                                                                                                                        |
-| Footer                       |                              |                                                |        |        |                                                                                                                           |
-| Instagram icon in the footer | Click on the Instagram icon  | The user is redirected to the Instagram page   | Yes    | Yes    | \-                                                                                                                        |
-| Facebook icon in the footer  | Click on the Facebook icon   | The user is redirected to the Facebook page    | Yes    | Yes    | \-                                                                                                                        |
-| X icon in the footer         | Click on the X icon          | The user is redirected to the X page           | Yes    | Yes    | \-                                                                                                                        |
-| " Home page"                 |                              |                                                |        |        |                                                                                                                           |
-| Logo                         | Click on the "Logo" link     | The user is redirected to the main page        | Yes    | Yes    | \-                                                                                                                        |
-| Membership page              |                              |                                                |        |        |                                                                                                                           |
-| Name input                   | Enter Name                   | Name is entered                                | Yes    | Yes    | If the user doesn't enter name, the error message appears                                                                 |
-| Email input                  | Enter the email              | The email is entered                           | Yes    | Yes    | If the user doesn't enter the email, the error message appears. If user enters not valid email, the error message appears |
-| Phone number input           | Enter the phone number       | The phone number is entered                    | Yes    | Yes    | If the user doesn't enter the number, the error message appears. If user enters an invalid number, input doesn't appear   |
-| Age input                    | Enter the age                | The age number is entered                      | Yes    | Yes    | If the user doesn't enter the age, the error message appears. If user enters an invalid number, input doesn't appear      |
-| Message input                | Enter message                | Message is entered                             | Yes    | Yes    | If the user doesn't enter a message, the error message appears.                                                           |
-| "Submit" button              | Click on the "Submit" button | The user is redirected to the response page    | Yes    | Yes    | \-                                                                                                                        |
-|                              |                              |                                                |        |
+| Feature          | Action                    | Expected result                           | Tested | Passed | Comments |
+| ---------------- | ------------------------- | ----------------------------------------- | ------ | ------ | -------- |
+| Home             | Click on the "Home" link  | The user is redirected to the main page   | Yes    | Yes    | \-       |
+| " Home page"     |                           |                                           |        |        |          |
+| "Restart" button | Click on "Restart" button | The new cards flip to show the back page  | Yes    | Yes    | \-       |
+| "Easy" button    | Click on "Easy" button    | Easy new cards flip to show the back page | Yes    | Yes    | \-       |
+| "Hard" button    | Click on "Hard" button    | Hard new cards flip to show the back page | Yes    | Yes    | \-       |
+
+#### Console
+
+-   Game play does not generate internal errors on the page or in the console as a result of user actions.
+
+-   ![Validation](./documentation/console-no-errors.png)
 
 #### Accessibility
 
