@@ -1,34 +1,34 @@
 [
     {
-        "image": "../assets/images/person.jpg",
+        "image": "assets/images/person.jpg",
         "name": "person"
     },
     {
-        "image": "../assets/images/small7691.png",
+        "image": "assets/images/small7691.png",
         "name": "small7691"
     },
     {
-        "image": "../assets/images/smalltree7704.jpg",
+        "image": "assets/images/smalltree7704.jpg",
         "name": "smalltree7704"
     },
     {
-        "image": "../assets/images/animal.png",
+        "image": "assets/images/animal.png",
         "name": "animal"
     },
     {
-        "image": "../assets/images/walrus.png",
+        "image": "assets/images/walrus.png",
         "name": "walrus"
     },
     {
-        "image": "../assets/images/car.png",
+        "image": "assets/images/car.png",
         "name": "car"
     },
     {
-        "image": "../assets/images/small7693.jpg",
+        "image": "assets/images/small7693.jpg",
         "name": "small7693"
     },
     {
-        "image": "../assets/images/small7689.jpg",
+        "image": "assets/images/small7689.jpg",
         "name": "small7689"
     }
 ]
