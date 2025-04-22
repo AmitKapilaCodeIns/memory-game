@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * Shuffles an array of cards using the Fisher-Yates algorithm.
  * This function modifies the array in place to randomize the order of its elements.
