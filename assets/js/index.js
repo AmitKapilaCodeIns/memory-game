@@ -1,6 +1,9 @@
+"use strict";
+
+// This is the main JavaScript file for the memory game.
 const rowContainer = document.querySelector("main>.container>.row");
 
-let cards = [];
+const cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
 let score = 0;
@@ -8,9 +11,12 @@ let score = 0;
 document.querySelector(".score").textContent = score;
 restart();
 
-function easy() {
+/**
+ * Starts a game of memory by fetching easy card data, shuffling the cards,
+ */
+async function easy() {
     rowContainer.innerHTML = "";
-    fetch("./data/cards.json") //Fetching the cards data from a local JSON file
+    await fetch("./data/cards.json") //Fetching the cards data from a local JSON file
         .then((response) => response.json()) //Parsing the JSON data
         .then((data) => {
             //Using the data to create the cards
@@ -20,9 +26,13 @@ function easy() {
         });
 }
 
-function hard() {
+/**
+ * Starts a game of memory with hard difficulty by fetching hard card data, shuffling the cards,
+ * and generating the cards.
+ */
+async function hard() {
     rowContainer.innerHTML = "";
-    fetch("./data/cards-hard.json") //Fetching the cards data from a local JSON file
+    await fetch("./data/cards-hard.json") //Fetching the cards data from a local JSON file
         .then((response) => response.json()) //Parsing the JSON data
         .then((data) => {
             //Using the data to create the cards
