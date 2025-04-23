@@ -33,7 +33,7 @@ function generateCards() {
     for (let card of cards) {
         const cardElement = document.createElement("div");
         cardElement.classList.add("card");
-        // cardElement.classList.add("col-12 col-md-6 col-xl-3");
+
         cardElement.setAttribute("data-name", card.name);
         cardElement.innerHTML = `
         <div class="front">
