@@ -11,7 +11,6 @@
       - [As a player, I want the hidden cards to change each time the game starts.](#as-a-player-i-want-the-hidden-cards-to-change-each-time-the-game-starts)
       - [As a player, I want to be see my score so that I have a target that I aim to beat in subsequent goes.](#as-a-player-i-want-to-be-see-my-score-so-that-i-have-a-target-that-i-aim-to-beat-in-subsequent-goes)
   - [Features](#features)
-      - [All pages on the website have](#all-pages-on-the-website-have)
   - [Code](#code)
       - [Files](#files)
       - [Code format](#code-format)
@@ -82,8 +81,6 @@
 
 The game has different levels. In easy mode the cards are colourful and different. In hard mode the cards are more monochrome. A player clicks on the cards to flip them and find the matching pairs. Their goal is to match each card with its pair in the least number of moves. The game is simple. A pair of cards will flip for 1.5 seconds giving the player the chance to remember the image and where it is in the grid.
 The restart will restart the easy game only. For the easy game the images are easier to remember. The hard game is more difficult as some images are monochrome and similarly shaped. Monochrome images are often harder to remember because color provides an additional "tag" of data, helping the brain process and store visual information more efficiently.
-
-#### All pages on the website have
 
 -   Clear Navigation: Easily navigate through different sections of the website.
 -   Responsive Design: The site adapts gracefully to various screen sizes, ensuring optimal usability whether you're browsing on a desktop, tablet, or mobile device. I used media queries for the different screen sizes.
