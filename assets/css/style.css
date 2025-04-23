@@ -47,17 +47,6 @@ h3 {
     font-family: var(--secondary-font);
 }
 
-/* grid visualization for testing */
-
-/* .container,
-.row {
-    border: 2px solid black;
-}
-.col-12 {
-    border: 2px solid white;
-    background-color: lightgray;
-} */
-
 button {
     background: var(--highlight-color);
     color: white;
