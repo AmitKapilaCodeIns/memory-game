@@ -1,10 +1,10 @@
 /* Google fonts import */
 
-@import url("https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Mouse+Memoirs&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Doto:wght,ROND@900,85&family=Handjet:wght@100..900&display=swap");
 
 /* CSS Variables */
 :root {
-    --primary-font: "Mouse Memoirs", sans-serif;
+    --primary-font: "Doto", sans-serif;
     --secondary-font: "Handjet", sans-serif;
     --primary-color: #ff5900;
     --secondary-color: #ff4000;
