@@ -1,35 +1,35 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Memory game](#memory-game)
-  - [Planning](#planning)
-  - [Requirements](#requirements)
-  - [User Stories](#user-stories)
-      - [As a First-Time Visitor, I need easy navigation and a user-friendly design, including a responsive layout for my device.](#as-a-first-time-visitor-i-need-easy-navigation-and-a-user-friendly-design-including-a-responsive-layout-for-my-device)
-      - [As a player, I want to see clear instructions on how to play, so I am clear on what I need to do in order to win.](#as-a-player-i-want-to-see-clear-instructions-on-how-to-play-so-i-am-clear-on-what-i-need-to-do-in-order-to-win)
-      - [As a player, I want to see revealed cards that allows me to keep track.](#as-a-player-i-want-to-see-revealed-cards-that-allows-me-to-keep-track)
-      - [As a player, I want the hidden cards to change each time the game starts.](#as-a-player-i-want-the-hidden-cards-to-change-each-time-the-game-starts)
-      - [As a player, I want to be see my score so that I have a target that I aim to beat in subsequent goes.](#as-a-player-i-want-to-be-see-my-score-so-that-i-have-a-target-that-i-aim-to-beat-in-subsequent-goes)
-  - [Features](#features)
-      - [All pages on the website have](#all-pages-on-the-website-have)
-  - [Code](#code)
-      - [Files](#files)
-      - [Code format](#code-format)
-      - [Code understandability](#code-understandability)
-      - [Code validation](#code-validation)
-  - [Testing](#testing)
-      - [Manual Testing](#manual-testing)
-      - [Differences Between Manual and Automated Testing](#differences-between-manual-and-automated-testing)
-      - [Console](#console)
-      - [Accessibility](#accessibility)
-      - [HTML](#html)
-      - [CSS](#css)
-  - [Bugs](#bugs)
-    - [Unfixed Bugs](#unfixed-bugs)
-  - [Deployment](#deployment)
-    - [Version Control](#version-control)
-  - [Wireframes](#wireframes)
-  - [Credits](#credits)
+-   [Memory game](#memory-game)
+    -   [Planning](#planning)
+    -   [Requirements](#requirements)
+    -   [User Stories](#user-stories)
+        -   [As a First-Time Visitor, I need easy navigation and a user-friendly design, including a responsive layout for my device.](#as-a-first-time-visitor-i-need-easy-navigation-and-a-user-friendly-design-including-a-responsive-layout-for-my-device)
+        -   [As a player, I want to see clear instructions on how to play, so I am clear on what I need to do in order to win.](#as-a-player-i-want-to-see-clear-instructions-on-how-to-play-so-i-am-clear-on-what-i-need-to-do-in-order-to-win)
+        -   [As a player, I want to see revealed cards that allows me to keep track.](#as-a-player-i-want-to-see-revealed-cards-that-allows-me-to-keep-track)
+        -   [As a player, I want the hidden cards to change each time the game starts.](#as-a-player-i-want-the-hidden-cards-to-change-each-time-the-game-starts)
+        -   [As a player, I want to be see my score so that I have a target that I aim to beat in subsequent goes.](#as-a-player-i-want-to-be-see-my-score-so-that-i-have-a-target-that-i-aim-to-beat-in-subsequent-goes)
+    -   [Features](#features)
+        -   [All pages on the website have](#all-pages-on-the-website-have)
+    -   [Code](#code)
+        -   [Files](#files)
+        -   [Code format](#code-format)
+        -   [Code understandability](#code-understandability)
+        -   [Code validation](#code-validation)
+    -   [Testing](#testing)
+        -   [Manual Testing](#manual-testing)
+        -   [Differences Between Manual and Automated Testing](#differences-between-manual-and-automated-testing)
+        -   [Console](#console)
+        -   [Accessibility](#accessibility)
+        -   [HTML](#html)
+        -   [CSS](#css)
+    -   [Bugs](#bugs)
+        -   [Unfixed Bugs](#unfixed-bugs)
+    -   [Deployment](#deployment)
+        -   [Version Control](#version-control)
+    -   [Wireframes](#wireframes)
+    -   [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -80,13 +80,13 @@
 
 ## Features
 
-The game has different levels. In easy mode there are 4 cards. In normal mode there are 8. In hard mode there are 16.
+The game has different levels. In easy mode the cards are colourful and different. In hard mode the cards are more monochrome. A player clicks on the cards to flip them and find the matching pairs. Their goal is to match each card with its pair in the least number of moves. The game is simple. A pair of cards will flip for 1.5 seconds giving the player the chance to remember the image and where it is in the grid.
+The restart will restart the easy game only. For the easy game the images are easier to remember. The hard game is more difficult as some images are monochrome and similarly shaped. Monochrome images are often harder to remember because color provides an additional "tag" of data, helping the brain process and store visual information more efficiently.
 
 #### All pages on the website have
 
 -   Clear Navigation: Easily navigate through different sections of the website.
 -   Responsive Design: The site adapts gracefully to various screen sizes, ensuring optimal usability whether you're browsing on a desktop, tablet, or mobile device. I used media queries for the different screen sizes.
--   The game handles errors for.....
 
 ---
 
@@ -99,7 +99,7 @@ The game has different levels. In easy mode there are 4 cards. In normal mode th
 
 #### Code format
 
--   VS code automatically indents HTML, Javascript and CSS to ease readability
+-   VS code automatically indents HTML, Javascript and CSS to ease readability.
 
 ```
 
@@ -218,7 +218,7 @@ All bugs identified were fixed
 
 ### Version Control
 
--   The site was created using VS Code as IDE and pushed to Github to the remote repository 'tennis-club'.
+-   The site was created using VS Code as IDE and pushed to Github to the remote repository 'memory-game'.
 -   Git commands were employed extensively during development to push the code to the remote repository. The sequence of Git commands utilized includes:
     -   **git add .**: This command adds the files to the staging area, preparing them for commitment.
     -   **git commit -m "commit message"**: It commits the changes to the local repository queue, marking them as ready for the final step.
@@ -226,12 +226,12 @@ All bugs identified were fixed
     ### Deployment to Github pages
     The site was deployed to GitHub pages. The steps taken to deploy are as follows:
     1. Log in to [Github](https://github.com/);
-    2. Navigate to [AmitKapilaCodeIns/tennis-club](https://github.com/AmitKapilaCodeIns/tennis-club) in the list of repositories;
+    2. Navigate to [AmitKapilaCodeIns/memory-game](https://github.com/AmitKapilaCodeIns/memory-game) in the list of repositories;
     3. In the GitHub repository, navigate to the Settings tab;
     4. In Settings scroll down to GitHub pages which opens in a new page;
     5. From the source section drop-down menu, select the Master Branch;
     6. Once the master branch has been selected, the page is automatically refreshed and a display indicates the successful deployment and the link to the address.
-       The live link can be accessed here: [Richings Tennis](https://amitkapilacodeins.github.io/tennis-club/index.html)
+       The live link can be accessed here: [Memory Game](https://amitkapilacodeins.github.io/memory-game/index.html)
     ### Cloning Repository Code locally
     -   To clone the repository code locally, follow these steps:
     1. Navigate to the Github repository you wish to clone;
@@ -255,11 +255,16 @@ All bugs identified were fixed
 -   I would like to extend a special thanks to my tutor [Spencer Barriball](https://www.linkedin.com/in/spencerbarriball/), whose guidance and support have been invaluable throughout this journey.
     ### Content
 -   The icons in the footer and in the headings were taken from:[Font Awesome](https://fontawesome.com/).
+-   The fonts were taken from:[Google Fonts](https://fonts.google.com/selection/).
+-   I used Bootstrap 5.3.5 to make the site responsive:[Bootstrap](https://getbootstrap.com).
+-   The CI LMS helped me to understand functions, fetch, parsing, looping, objects:[Set up repo](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+JSE101+1/courseware/7af87edec5384cc4a39f2411b6dfd783/50f4a9b6879447d3a1aa0f639990e36d/).
+-   The CI LMS helped me to add external libraries, set up the repo, project board and user stories:[Set up repo](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+BG+2/courseware/21d4dc3fa8f0407a8359ceb1d6fc0c51/54efa8b9c09141d68b782d9b1d629f84/?child=first).
+-   The CI LMS helped me to use CSS variables:[CSS variables](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+BG+2/courseware/21d4dc3fa8f0407a8359ceb1d6fc0c51/54efa8b9c09141d68b782d9b1d629f84/?child=first).
+-   I used an online tool to detect errors and potential problems in the JavaScript code:[JSHint](https://jshint.com/).
+-   I searched online for JavaScript code to help me shuffle the cards:[Fisher Yates](https://stackoverflow.com/questions/59810241/how-to-fisher-yates-shuffle-a-javascript-array).
 
     ### Media
 
--   All the images in each page of the site: Home, Services and Member was taken from: [Pexels](https://www.pexels.com/).
--   The video in the home page was also taken from [Pexels](https://www.pexels.com/).
--   For a better performance of the website, the images were resized and the format changed to WEBP using the [Birme](https://www.birme.net/) website.
-
-[def]: .documentation/checkmylinks.png
+-   The background image on the back of the card was taken from Pattern Monster: [Pattern Monster](https://pattern.monster/squares-and-squares-1).
+-   The icons were taken from favicon [favicon](https://favicon.io/favicon-converter/).
+-   The mockup was generated online [Mockup](https://websitemockupgenerator.com/) website.
