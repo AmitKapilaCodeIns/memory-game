@@ -190,15 +190,14 @@ Open the game in a web browser. Select a difficulty level, between Easy and Hard
 
 #### HTML
 
--   [HTML Validator](https://validator.w3.org/#validate_by_upload) was run on each page of the project. A syntax error was found in the footer of all 4 pages.
+-   [HTML Validator](https://validator.w3.org/#validate_by_upload) was run on each page of the project. A missing div error was found but fixed. Now there is only a warning.
+    ![Screenshot HTML page validator](./documentation/html-validator.png)
 
 #### CSS
 
 -   [Vendor prefixes](https://autoprefixer.github.io/) Used Autoprefixer to parse the CSS and add vendor prefixes.
--   [CSS Validator](https://validator.w3.org/#validate_by_upload) some syntax errors were identified.
-    ![Screenshot CSS page validator error ](./documentation/css-validator.png)
--   These were fixed.
-    ![Screenshot CSS page validator fixed ](./documentation/css-validatorfixed.png)
+-   [CSS Validator](https://validator.w3.org/#validate_by_upload) no syntax errors were identified.
+    ![Screenshot CSS page validator fixed ](./documentation/css-validator.png)
 
 ---
 
