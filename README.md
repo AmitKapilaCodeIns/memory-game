@@ -1,34 +1,34 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Memory game](#memory-game)
-  - [Planning](#planning)
-  - [Requirements](#requirements)
-  - [User Stories](#user-stories)
-      - [As a First-Time Visitor, I need easy navigation and a user-friendly design, including a responsive layout for my device.](#as-a-first-time-visitor-i-need-easy-navigation-and-a-user-friendly-design-including-a-responsive-layout-for-my-device)
-      - [As a player, I want to see clear instructions on how to play, so I am clear on what I need to do in order to win.](#as-a-player-i-want-to-see-clear-instructions-on-how-to-play-so-i-am-clear-on-what-i-need-to-do-in-order-to-win)
-      - [As a player, I want to see revealed cards that allows me to keep track.](#as-a-player-i-want-to-see-revealed-cards-that-allows-me-to-keep-track)
-      - [As a player, I want the hidden cards to change each time the game starts.](#as-a-player-i-want-the-hidden-cards-to-change-each-time-the-game-starts)
-      - [As a player, I want to be see my score so that I have a target that I aim to beat in subsequent goes.](#as-a-player-i-want-to-be-see-my-score-so-that-i-have-a-target-that-i-aim-to-beat-in-subsequent-goes)
-  - [Features](#features)
-  - [Code](#code)
-      - [Files](#files)
-      - [Code format](#code-format)
-      - [Code understandability](#code-understandability)
-      - [Code validation](#code-validation)
-  - [Testing](#testing)
-      - [Manual Testing](#manual-testing)
-      - [Differences Between Manual and Automated Testing](#differences-between-manual-and-automated-testing)
-      - [Console](#console)
-      - [Accessibility](#accessibility)
-      - [HTML](#html)
-      - [CSS](#css)
-  - [Bugs](#bugs)
-    - [Unfixed Bugs](#unfixed-bugs)
-  - [Deployment](#deployment)
-    - [Version Control](#version-control)
-  - [Wireframes](#wireframes)
-  - [Credits](#credits)
+-   [Memory game](#memory-game)
+    -   [Planning](#planning)
+    -   [Requirements](#requirements)
+    -   [User Stories](#user-stories)
+        -   [As a First-Time Visitor, I need easy navigation and a user-friendly design, including a responsive layout for my device.](#as-a-first-time-visitor-i-need-easy-navigation-and-a-user-friendly-design-including-a-responsive-layout-for-my-device)
+        -   [As a player, I want to see clear instructions on how to play, so I am clear on what I need to do in order to win.](#as-a-player-i-want-to-see-clear-instructions-on-how-to-play-so-i-am-clear-on-what-i-need-to-do-in-order-to-win)
+        -   [As a player, I want to see revealed cards that allows me to keep track.](#as-a-player-i-want-to-see-revealed-cards-that-allows-me-to-keep-track)
+        -   [As a player, I want the hidden cards to change each time the game starts.](#as-a-player-i-want-the-hidden-cards-to-change-each-time-the-game-starts)
+        -   [As a player, I want to be see my score so that I have a target that I aim to beat in subsequent goes.](#as-a-player-i-want-to-be-see-my-score-so-that-i-have-a-target-that-i-aim-to-beat-in-subsequent-goes)
+    -   [Features](#features)
+    -   [Code](#code)
+        -   [Files](#files)
+        -   [Code format](#code-format)
+        -   [Code understandability](#code-understandability)
+        -   [Code validation](#code-validation)
+    -   [Testing](#testing)
+        -   [Manual Testing](#manual-testing)
+        -   [Differences Between Manual and Automated Testing](#differences-between-manual-and-automated-testing)
+        -   [Console](#console)
+        -   [Accessibility](#accessibility)
+        -   [HTML](#html)
+        -   [CSS](#css)
+    -   [Bugs](#bugs)
+        -   [Unfixed Bugs](#unfixed-bugs)
+    -   [Deployment](#deployment)
+        -   [Version Control](#version-control)
+    -   [Wireframes](#wireframes)
+    -   [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -44,7 +44,7 @@
 
 -   The site should be responsive, adapting to all screen sizes.
 
--   Players should be allowed to challenge their memory skills with different levels as they build up confidence. They should be congratulated with a rewarding pop up notification.
+-   Players should be allowed to challenge their memory skills with different levels as they build up confidence.
 
 ![Site images in all screens size responsive](./documentation/responsive.png)
 
@@ -129,16 +129,50 @@ function easy() {
 -   Copious amounts of comments to explain what the code is doing and why.
 
 ```
-function hard() {
-    rowContainer.innerHTML = "";
-    fetch("./data/cards-hard.json") //Fetching the cards data from a local JSON file
-        .then((response) => response.json()) //Parsing the JSON data
-        .then((data) => {
-            //Using the data to create the cards
-            cards = [...data, ...data]; // spread operator to duplicate the array
-            shuffleCards();
-            generateCards();
-        });
+/**
+ * Shuffles an array of cards using the Fisher-Yates algorithm.
+ * This function modifies the array in place to randomize the order of its elements.
+ * https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+ * @returns {void}
+ */
+function shuffleCards() {
+    let currentIndex = cards.length,
+        randomIndex,
+        temporaryValue;
+    // While there remain elements to shuffle...
+    while (currentIndex !== 0) {
+        // Pick a remaining element...
+        let randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        // And swap it with the current element.
+        [cards[currentIndex], cards[randomIndex]] = [
+            cards[randomIndex],
+            cards[currentIndex],
+        ];
+    }
+}
+
+/**
+ * Generates card elements dynamically based on the `cards` array and appends them to the grid container.
+ * Each card element is created with a front and back side, and an event listener is added to handle the flip action.
+ *
+ * @returns {void}
+ */
+function generateCards() {
+    for (let card of cards) {
+        const cardElement = document.createElement("div");
+        cardElement.classList.add("card");
+
+        cardElement.setAttribute("data-name", card.name);
+        cardElement.innerHTML = `
+        <div class="front">
+        <img class="front-image" src=${card.image} />
+        </div>
+        <div class="back"></div>`;
+
+        rowContainer.appendChild(cardElement);
+        cardElement.addEventListener("click", flipCard);
+    }
 }
 ```
 
@@ -184,6 +218,8 @@ Open the game in a web browser. Select a difficulty level, between Easy and Hard
 #### Accessibility
 
 -   I used Lighthouse within the Chrome Developer Tools to allow me to test the performance, accessibility, best practices and SEO of the website. I confirmed that the colours and fonts are easy to read and that the site is accessible.
+-   **INDEX PAGE**  
+    ![Lighthouse Index page screenshot ](./documentation/index-lighthouse.png)
 
 #### HTML
 
