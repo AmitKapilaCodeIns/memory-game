@@ -221,6 +221,9 @@ Open the game in a web browser. Select a difficulty level, between Easy and Hard
 -   **INDEX PAGE**  
     ![Lighthouse Index page screenshot ](./documentation/index-lighthouse.png)
 
+-   The website was tested on Chrome, Mozilla, Edge and Safari browsers with no problems found.
+-   Links: Tested and confirmed that each link refer to each page, worked as expected,and redirecting the user between the pages ![Screenshot google extension](./documentation/checkmylinks.png)
+
 #### HTML
 
 -   [HTML Validator](https://validator.w3.org/#validate_by_upload) was run on each page of the project. A missing div error was found but fixed. Now there is only a warning.
