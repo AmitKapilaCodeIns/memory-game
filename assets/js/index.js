@@ -27,6 +27,22 @@ async function easy() {
 }
 
 /**
+ * Starts a game of memory with medium difficulty by fetching medium card data, shuffling the cards,
+ * and generating the cards.
+ */
+async function medium() {
+    $rowContainer.html("");
+    await fetch("./data/cards-medium.json") //Fetching the cards data from a local JSON file
+        .then((response) => response.json()) //Parsing the JSON data
+        .then((data) => {
+            //Using the data to create the cards
+            cards = [...data, ...data]; // spread operator to duplicate the array
+            shuffleCards();
+            generateCards();
+        });
+}
+
+/**
  * Starts a game of memory with hard difficulty by fetching hard card data, shuffling the cards,
  * and generating the cards.
  */
