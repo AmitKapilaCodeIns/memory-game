@@ -60,6 +60,15 @@ function flipCard() {
 
     this.classList.add("flipped");
 
+    const flippedCards = $(".card.flipped");
+    if (flippedCards.length === 16) {
+        setTimeout(() => {
+            alert(
+                `Congratulations! You've flipped all the cards in ${score} moves! .`
+            );
+        }, 500);
+    }
+
     if (!firstCard) {
         firstCard = this;
         return;
