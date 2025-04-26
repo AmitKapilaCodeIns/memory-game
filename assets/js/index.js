@@ -49,7 +49,7 @@ function restart() {
     resetBoard();
 
     score = 0;
-    document.querySelector(".score").textContent = score;
+    $(".score").text(score);
     $rowContainer.html("");
     easy();
 }
