@@ -239,9 +239,7 @@ Open the game in a web browser. Select a difficulty level, between Easy and Hard
 
 ## Bugs
 
--   On smaller screens, the navbar did not close when clicking on links to sections on the same page.
-    ![Screenshot Navigation to section Bug ](./documentation/navbar-not-closing.png)
--   Fixed by adding javaScript to ensure the navbar closes when clicking internal links
+-   There were no bugs found.
 
 ---
 
