@@ -41,7 +41,7 @@ function generateCards() {
         </div>
         <div class="back"></div>`;
 
-        rowContainer.appendChild(cardElement);
+        $rowContainer.append(cardElement);
         cardElement.addEventListener("click", flipCard);
     }
 }

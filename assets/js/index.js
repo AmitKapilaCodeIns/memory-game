@@ -1,21 +1,21 @@
 "use strict";
 
 // This is the main JavaScript file for the memory game.
-const rowContainer = document.querySelector("main>.container>.row");
+const $rowContainer = $("main>.container>.row");
 
 let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
 let score = 0;
 
-document.querySelector(".score").textContent = score;
+$(".score").text(score);
 restart();
 
 /**
  * Starts a game of memory by fetching easy card data, shuffling the cards,
  */
 async function easy() {
-    rowContainer.innerHTML = "";
+    $rowContainer.html("");
     await fetch("./data/cards.json") //Fetching the cards data from a local JSON file
         .then((response) => response.json()) //Parsing the JSON data
         .then((data) => {
@@ -31,7 +31,7 @@ async function easy() {
  * and generating the cards.
  */
 async function hard() {
-    rowContainer.innerHTML = "";
+    $rowContainer.html("");
     await fetch("./data/cards-hard.json") //Fetching the cards data from a local JSON file
         .then((response) => response.json()) //Parsing the JSON data
         .then((data) => {
@@ -50,6 +50,6 @@ function restart() {
 
     score = 0;
     document.querySelector(".score").textContent = score;
-    rowContainer.innerHTML = "";
+    $rowContainer.html("");
     easy();
 }
