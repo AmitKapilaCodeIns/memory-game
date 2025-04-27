@@ -56,6 +56,10 @@ button {
     border-radius: 5px;
 }
 
+main .level {
+    text-transform: capitalize;
+}
+
 main .row {
     width: 100%;
     gap: 16px;
