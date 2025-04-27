@@ -7,6 +7,7 @@ let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
 let score = 0;
+let currentLevel = "easy";
 
 $(".score").text(score);
 restart();
@@ -15,6 +16,8 @@ restart();
  * Starts a game of memory by fetching easy card data, shuffling the cards,
  */
 async function easy() {
+    currentLevel = "easy";
+    $(".level").text(currentLevel);
     $rowContainer.html("");
     await fetch("./data/cards.json") //Fetching the cards data from a local JSON file
         .then((response) => response.json()) //Parsing the JSON data
@@ -31,6 +34,8 @@ async function easy() {
  * and generating the cards.
  */
 async function medium() {
+    currentLevel = "medium";
+    $(".level").text(currentLevel);
     $rowContainer.html("");
     await fetch("./data/cards-medium.json") //Fetching the cards data from a local JSON file
         .then((response) => response.json()) //Parsing the JSON data
@@ -47,6 +52,8 @@ async function medium() {
  * and generating the cards.
  */
 async function hard() {
+    currentLevel = "hard";
+    $(".level").text(currentLevel);
     $rowContainer.html("");
     await fetch("./data/cards-hard.json") //Fetching the cards data from a local JSON file
         .then((response) => response.json()) //Parsing the JSON data
