@@ -79,8 +79,8 @@
 
 ## Features
 
-The game has different levels. In easy mode the cards are colourful and different. In hard mode the cards are more monochrome. A player clicks on the cards to flip them and find the matching pairs. Their goal is to match each card with its pair in the least number of moves. The game is simple. A pair of cards will flip for 1.5 seconds giving the player the chance to remember the image and where it is in the grid.
-The restart will restart the easy game only. For the easy game the images are easier to remember. The hard game is more difficult as some images are monochrome and similarly shaped. Monochrome images are often harder to remember because color provides an additional "tag" of data, helping the brain process and store visual information more efficiently.
+The game has different levels. In easy mode the cards are colourful and different. In medium mode the cards are more monochrome. A player clicks on the cards to flip them and find the matching pairs. Their goal is to match each card with its pair in the least number of moves. The game is simple. A pair of cards will flip for 1.5 seconds giving the player the chance to remember the image and where it is in the grid.
+The restart will restart the easy game only. For the easy game the images are easier to remember. The medium game is more difficult as some images are monochrome and similarly shaped. Monochrome images are often harder to remember because color provides an additional "tag" of data, helping the brain process and store visual information more efficiently. The hard game's images are different times on the same clock face. This brings in an additional level of difficulty as the player would have to remember the time on the image.
 
 -   Clear Navigation: Easily navigate through different sections of the website.
 -   Responsive Design: The site adapts gracefully to various screen sizes, ensuring optimal usability whether you're browsing on a desktop, tablet, or mobile device. I used media queries for the different screen sizes.
@@ -295,6 +295,7 @@ All bugs identified were fixed
 -   The CI LMS helped me to use CSS variables:[CSS variables](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+BG+2/courseware/21d4dc3fa8f0407a8359ceb1d6fc0c51/54efa8b9c09141d68b782d9b1d629f84/?child=first).
 -   I used an online tool to detect errors and potential problems in the JavaScript code:[JSHint](https://jshint.com/).
 -   I searched online for JavaScript code to help me shuffle the cards:[Fisher Yates](https://stackoverflow.com/questions/59810241/how-to-fisher-yates-shuffle-a-javascript-array).
+-   I used sweet alerts for the pop up triggered upon completing the game:[Sweet Alerts2](https://sweetalert2.github.io/).
 
     ### Media
 
