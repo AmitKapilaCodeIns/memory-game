@@ -60,15 +60,6 @@ function flipCard() {
 
     this.classList.add("flipped");
 
-    const flippedCards = $(".card.flipped");
-    if (flippedCards.length === 16) {
-        setTimeout(() => {
-            alert(
-                `Congratulations! You've flipped all the cards in ${score} moves! .`
-            );
-        }, 500);
-    }
-
     if (!firstCard) {
         firstCard = this;
         return;
@@ -80,6 +71,7 @@ function flipCard() {
     lockBoard = true;
 
     checkForMatch();
+    checkAllCardsFlipped();
 }
 
 /**
@@ -131,5 +123,47 @@ function resetBoard() {
     if (firstCard !== null || secondCard !== null) {
         [firstCard, secondCard] = [null, null];
         lockBoard = false;
+    }
+}
+
+/**
+ * Checks if all cards have been flipped by verifying if every card element has the "flipped" class.
+ * If all cards are flipped, it triggers a win condition.
+ *
+ * @returns {void}
+ */
+function checkAllCardsFlipped() {
+    const allCards = document.querySelectorAll(".card");
+    const allFlipped = Array.from(allCards).every((card) =>
+        card.classList.contains("flipped")
+    );
+
+    if (allFlipped && currentLevel !== "hard") {
+        setTimeout(() => {
+            Swal.fire({
+                title: "Winner!",
+                text: `Congratulations! You've flipped all the cards in ${score} moves! .`,
+                imageUrl: "../assets/images/win-icon.png",
+                imageWidth: 512,
+                imageHeight: 384,
+                showCancelButton: true,
+                cancelButtonColor: "#d33",
+                imageAlt: "Winner image",
+                confirmButtonText: "Next level?",
+                cancelButtonText: "Exit",
+            }).then((result) => {
+                if (result.isConfirmed && currentLevel === "easy") {
+                    score = 0;
+                    $(".score").text(score);
+                    medium();
+                } else if (result.isConfirmed && currentLevel === "medium") {
+                    score = 0;
+                    $(".score").text(score);
+                    hard();
+                } else {
+                    window.location.href = "../index.html";
+                }
+            });
+        }, 500);
     }
 }
