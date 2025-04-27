@@ -7,7 +7,7 @@ let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
 let score = 0;
-let currentLevel = "easy";
+let currentLevel;
 
 $(".score").text(score);
 restart();
