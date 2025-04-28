@@ -143,7 +143,7 @@ function checkAllCardsFlipped() {
             Swal.fire({
                 title: "Winner!",
                 text: `Congratulations! You've flipped all the cards in ${score} moves! .`,
-                imageUrl: "../assets/images/win.png",
+                imageUrl: "assets/images/win.png",
                 imageWidth: 512,
                 imageHeight: 384,
                 showCancelButton: true,
