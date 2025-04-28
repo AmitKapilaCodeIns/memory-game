@@ -145,6 +145,7 @@ function checkAllCardsFlipped() {
                 width: 600,
                 padding: "3em",
                 color: "#b3316cc7",
+                confirmButtonColor: "#b3316cc7",
                 background: "#fff url(assets/images/win.png)",
                 backdrop: `
                   rgba(0,0,123,0.4)
