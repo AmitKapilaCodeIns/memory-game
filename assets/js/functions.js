@@ -138,6 +138,24 @@ function checkAllCardsFlipped() {
         card.classList.contains("flipped")
     );
 
+    if (allFlipped && currentLevel === "hard") {
+        setTimeout(() => {
+            Swal.fire({
+                title: "You reached the highest level!!",
+                width: 600,
+                padding: "3em",
+                color: "#b3316cc7",
+                background: "#fff url(assets/images/win.png)",
+                backdrop: `
+                  rgba(0,0,123,0.4)
+                  url("assets/images/chrisreeve.gif")
+                  left top
+                  no-repeat
+                `,
+            });
+        }, 500);
+    }
+
     if (allFlipped && currentLevel !== "hard") {
         setTimeout(() => {
             Swal.fire({
