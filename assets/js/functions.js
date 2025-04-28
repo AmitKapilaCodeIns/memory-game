@@ -147,6 +147,7 @@ function checkAllCardsFlipped() {
                 imageWidth: 512,
                 imageHeight: 384,
                 showCancelButton: true,
+                confirmButtonColor: "#b3316cc7",
                 cancelButtonColor: "#ff4000",
                 imageAlt: "Winner image",
                 confirmButtonText: "Next level?",
