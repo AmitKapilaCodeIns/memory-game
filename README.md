@@ -302,3 +302,4 @@ All bugs identified were fixed
 -   The background image on the back of the card was taken from Pattern Monster: [Pattern Monster](https://pattern.monster/squares-and-squares-1).
 -   The icons were taken from favicon [favicon](https://favicon.io/favicon-converter/).
 -   The mockup was generated online [Mockup](https://websitemockupgenerator.com/) website.
+-   The GIF was downloaded from giphy.com [Superman GIF](https://giphy.com/gifs/superman-ok-R8MIGe47XWx68) website.
